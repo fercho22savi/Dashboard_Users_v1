@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="styles/dashboard_Users_v1.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>Admin dashboard</h2>
+        <ul>
+            <li>Users</li>
+            <li>Shouts</li>
+            <li>Events</li>
+            <li>Bots</li>
+        </ul>
+    </nav>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="copyBtn">📋 Copy</button>
+        <button id="csvBtn">📂 Export CSV</button>
+        <input type="text" id="searchInput" placeholder="🔍 Search user...">
+    </div>
+
+    <!-- Users Table -->
+    <div class="table-container">
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Full name</th>
+                    <th>Email</th>
+                    <th>Email verified</th>
+                    <th>Last activity</th>
+                    <th>Last profile update</th>
+                    <th>Admin</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>admin</td>
+                    <td>Admin is my name</td>
+                    <td>admin@gmail.com</td>
+                    <td>true</td>
+                    <td>2025-08-27 15:00</td>
+                    <td>2025-08-27 16:00</td>
+                    <td>true</td>
+                </tr>
+                <tr>
+                    <td>amy</td>
+                    <td>Amy Tiwatota</td>
+                    <td>amy@gmail.com</td>
+                    <td>true</td>
+                    <td>2025-08-26 11:30</td>
+                    <td>2025-08-27 09:20</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>andrew</td>
+                    <td>Andrew Johnson</td>
+                    <td>andrew@gmail.com</td>
+                    <td>true</td>
+                    <td>2025-08-20 08:22</td>
+                    <td>2025-08-22 15:45</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>elin</td>
+                    <td>Elin Muller</td>
+                    <td>elin@gmail.com</td>
+                    <td>true</td>
+                    <td>2025-08-22 10:32</td>
+                    <td>2025-08-22 11:02</td>
+                    <td>false</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal for user details -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <h3>Detalles del Usuario</h3>
+            <p id="modalInfo"></p>
+        </div>
+    </div>
+
+    <script src="scripts/dashboard_Users_v1.js"></script>
+</body>
+
+</html>
